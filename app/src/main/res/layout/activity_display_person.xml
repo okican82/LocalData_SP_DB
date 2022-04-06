@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Activities.DisplayPersonActivity">
+
+    <EditText
+        android:textSize="24sp"
+        android:id="@+id/name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:textSize="24sp"
+        android:id="@+id/surname_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:textSize="24sp"
+        android:id="@+id/phoneNumber_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:textSize="24sp"
+        android:id="@+id/company_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:textSize="24sp"
+        android:id="@+id/email_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:text="@string/Save"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:text="@string/Delete"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+</LinearLayout>

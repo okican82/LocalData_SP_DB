@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LocalData_SP_DB</string>
+    <string name="Name">Name</string>
+    <string name="Surname">Surname</string>
+    <string name="PhoneNumber">Phone Number</string>
+    <string name="Company">Company</string>
+    <string name="Email">E-mail</string>
+    <string name="Save">Save</string>
+    <string name="Delete">Delete</string>
+
+
+    <string name="error_message">This place Can not be Empty</string>
+
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+</resources>
