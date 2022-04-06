@@ -12,9 +12,7 @@
         <activity
             android:name=".Activities.DisplayPersonActivity"
             android:exported="false" />
-        <activity
-            android:name=".Activities.UserDetailActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Activities.AddPersonActivity"
             android:exported="true"></activity>

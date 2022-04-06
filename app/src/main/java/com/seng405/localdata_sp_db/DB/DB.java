@@ -16,7 +16,7 @@ import java.util.Locale;
 public class DB extends SQLiteOpenHelper {
 
     private static DB dbInstance = null;
-    private final static String databaseName = "rollCallDB";
+    private final static String databaseName = "PersonDB";
     private final static int databaseVersion = 1;
     private String PERSON_TABLE = "Persons";
 
@@ -51,7 +51,7 @@ public class DB extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-
+        sqLiteDatabase.execSQL("ALTER TABLE "+ PERSON_TABLE + " ADD COLUMN age INTEGER");
     }
 
     @SuppressLint("Range")
@@ -70,7 +70,6 @@ public class DB extends SQLiteOpenHelper {
 
         Person person;
 
-        //Person(String name, String surname, int userId, String phoneNumber, String company, String email) {
         if(cursor.moveToFirst())
         {
             new Person(
@@ -83,9 +82,8 @@ public class DB extends SQLiteOpenHelper {
             );
         }
 
+        cursor.close();
         return null;
-
-
     }
 
     @SuppressLint("Range")
@@ -124,6 +122,7 @@ public class DB extends SQLiteOpenHelper {
             while(cursor.moveToNext());
         }
 
+        cursor.close();
         sqLiteDatabase.close();
 
         return personArrayList;
@@ -149,8 +148,6 @@ public class DB extends SQLiteOpenHelper {
                         String.valueOf(userId)
                 }
         );
-
-
 
         sqLiteDatabase.close();
     }

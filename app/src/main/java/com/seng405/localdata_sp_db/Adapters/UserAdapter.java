@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.seng405.localdata_sp_db.Activities.DisplayPersonActivity;
-import com.seng405.localdata_sp_db.Activities.UserDetailActivity;
 import com.seng405.localdata_sp_db.Entity.Person;
 import com.seng405.localdata_sp_db.R;
 
