@@ -20,6 +20,8 @@ import java.util.ArrayList;
 public class PhoneBookListActivity extends AppCompatActivity {
 
     ActivityPhoneBookListBinding activityPhoneBookListBinding;
+    UserAdapter adapter;
+    ArrayList<Person> personArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +32,9 @@ public class PhoneBookListActivity extends AppCompatActivity {
         setContentView(view);
 
 
-        ArrayList<Person> personArrayList = DB.getInstance(this).getPersonList();
+        personArrayList = DB.getInstance(this).getPersonList();
 
-
-        UserAdapter adapter = new UserAdapter(personArrayList);
+        adapter = new UserAdapter(personArrayList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         activityPhoneBookListBinding.userList.setLayoutManager(mLayoutManager);
         activityPhoneBookListBinding.userList.setAdapter(adapter);
@@ -46,6 +47,15 @@ public class PhoneBookListActivity extends AppCompatActivity {
             }
         });
 
+    }
 
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        personArrayList.clear();
+        personArrayList.addAll( DB.getInstance(this).getPersonList());
+
+        adapter.notifyDataSetChanged();
     }
 }

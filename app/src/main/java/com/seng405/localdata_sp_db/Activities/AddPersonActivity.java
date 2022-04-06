@@ -83,6 +83,7 @@ public class AddPersonActivity extends Activity {
     {
         DB db = DB.getInstance(this);
         db.addNewPerson(person.getName(),person.getSurname(),person.getPhoneNumber(),person.getCompany(),person.getEmail());
+        finish();
 
     }
 }
